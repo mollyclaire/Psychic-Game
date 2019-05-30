@@ -21,6 +21,7 @@ console.log(computerGuess);
 // Reset Game
 function reset() {
     computerGuess = alphabet[Math.floor(Math.random() * alphabet.length)];
+    console.log(computerGuess);
     remainingGuesses.textContent = 10;
     alreadyGuessed.textContent = "";
 }
@@ -40,7 +41,7 @@ document.onkeyup = function(event) {
         wins++;
         winText.textContent = wins++;
         reset();
-
+ 
     // If no, subtract a point from "Remaining guesses"
     } else {
         remainingGuesses.textContent = remaining--;
